@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Sunflower',
-        sans-serif;
+    font-family: 'Sunflower', sans-serif;
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
@@ -13,7 +12,7 @@ body {
 }
 
 .container {
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .sub-container {
@@ -84,6 +83,120 @@ body {
     font-size: 18px;
 }
 
+.content{
+    background: #fff;
+    margin: 10px 480px;
+}
+
+/* navigation bar */
+
+header{
+    background: #3fb178;
+
+
+
+}
+
+header::after {
+     content: '';
+     display: table;
+     clear: both;
+}
+
+.logo{
+    float: left;
+    
+}
+
+.navbar{
+    width: 95%;
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+  display: inline-block;  
+  margin-left: 100px;
+  padding-top: 45px;
+
+}
+
+nav a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    color: #000;
+}
+
+
+
+
+
+/* Table */
+
+body h1{
+    text-align: center;
+    margin-top: 120px;
+}
+
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius:5px 5px 0 0;
+    overflow: hidden;
+
+
+}
+.content-table th{
+    background-color: #009879;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tr{
+    border-bottom: 1px solid ;
+}
+
+.content-table tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content-table tr:last-of-type{
+    border-bottom :2px solid #009879 ;
+}
+
+
+.button{
+    height: 32px;
+    width: 120px;
+    border-radius: 2px;
+    background: #3fb178;
+    color: #fff;
+	font-family: sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition:0.2s ease;
+	cursor: pointer;
+}
+
+
 @media screen and (max-width:600px) {
     .sub-container {
         flex-direction: column;
@@ -106,4 +219,7 @@ body {
         font-size: 20px;
         margin-bottom: 20px;
     }
+    
+
+    
 }
