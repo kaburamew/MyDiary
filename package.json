@@ -1,0 +1,39 @@
+{
+  "name": "MyDiary",
+  "version": "1.0.0",
+  "description": "MyDiary is an online journal where users can pen down their thoughts and feelings.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./SERVER/app.js",
+    "test": "nyc --reporter=html --reporter=text --timeout=30000 mocha --require babel-register ./SERVER/tests/*.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaburamew/MyDiary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaburamew/MyDiary/issues"
+  },
+  "homepage": "https://github.com/kaburamew/MyDiary#readme",
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "bcrypt-nodejs": "0.0.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1"
+  }
+}
