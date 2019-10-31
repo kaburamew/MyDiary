@@ -30,7 +30,7 @@ class userController {
       status: 201,
       message: 'User created successfully',
       token: utoken,
-      data: newuser,
+      data: {firstname, lastname, email},
     });
   }
 
