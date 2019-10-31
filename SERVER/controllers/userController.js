@@ -20,8 +20,8 @@ class userController {
     const checkmail = users.find((usr) => usr.email === email);
 
     if (checkmail) {
-      return res.status(403).json({
-        status: 403,
+      return res.status(401).json({
+        status: 401,
         error: 'email already exist',
       });
     }
@@ -31,6 +31,32 @@ class userController {
       message: 'User created successfully',
       token: utoken,
       data: newuser,
+    });
+  }
+
+  static login(req, res){
+    const { email, password } = req.body;
+    const checkmail = users.find(usr => usr.email === email);
+    const utoken = usertoken.sign({
+      email,
+    }, process.env.secret_key);
+    if(!checkmail){
+      return res.status(401).json({
+        status: 401,
+        error: 'user does not exist',
+      });
+    }
+    const checkPassword = bcrypt.compareSync( password, checkmail.password);
+    if(!checkPassword){
+      return res.status(401).json({
+        status: 401,
+        error: 'email or password is incorrect',
+      });
+    } 
+    return res.status(200).json({
+      status: 200,
+      message: 'user successfully logged in',
+      token: utoken,
     });
   }
 }
