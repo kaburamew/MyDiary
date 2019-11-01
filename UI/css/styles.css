@@ -64,13 +64,16 @@ body {
     padding: 8px;
 }
 
-.sub-container .login-form .btn {
+.sub-container .login-form .btn{
     padding: 10px;
     background: #6e8d30;
     color: #fff;
     font-size: 20px;
     letter-spacing: 2px;
     cursor: pointer;
+}
+ a{
+    color: #fff;
 }
 
 .sub-container .login-form .link {
@@ -116,10 +119,7 @@ body {
     color: #fff;
 }
 
-.button{
-    
-    
-}
+
 
 strong{
     font-size: 18px;
